@@ -121,3 +121,26 @@ call pathogen#infect()
 
 let g:slime_target = "tmux"
 
+" Trying to get VIM attached to the Mountain Lion clipboard
+set clipboard+=unnamed
+
+" Adding a command to show search results in the quickfix window
+" via http://vim.wikia.com/wiki/Search_using_quickfix_to_list_occurrences
+
+command GREP :execute 'vimgrep '.expand('<cword>').' '.expand('%') | :copen | :cc
+
+" Commands for copying things to test and prod using xxcp shell script
+
+nmap ,wat :wa\|:redir @a\|:execute 'windo echon @% " "'\|:redir END\|:execute '! xxcp test '.@a<cr>
+nmap ,wap :wa\|:redir @a\|:execute 'windo echon @% " "'\|:redir END\|:execute '! xxcp default '.@a<cr>
+
+" First attempt at adding code folding
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+" Adds insert of current path anywhere in vim
+" From Destroy All Software #13
+cnoremap %% <C-R>=expand('%:h').'/'<cr>

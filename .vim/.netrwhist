@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/Kai/Personal/code/substantial-test/spec'
+let g:netrw_dirhist_2='/Users/Kai/Personal/code/substantial-test/lib/substantial-test'
+let g:netrw_dirhist_3='/Users/Kai/Personal/code/devise/lib/devise/models'
+let g:netrw_dirhist_4='/Users/Kai/Personal/code/substantial_test/spec'
+let g:netrw_dirhist_5='/Users/Kai/Work/temp/smart-archives-reloaded/inc'
+let g:netrw_dirhist_6='/Users/Kai/personal-post-backup/didthat/config/initializers'
+let g:netrw_dirhist_7='/Users/Kai/Personal/code/fb_msg/spec'
